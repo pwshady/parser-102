@@ -33,11 +33,19 @@ class TopMenuView() : View(){
             }
         }
 
-        for (i in 0 until myMenubar.size) {
-            var myItem = myMenubar[i] as List<Any>
-            var mm = mb.menu(myItem[0].toString())
-            addItemMenu(mm, myItem[2] as List<Any>)
+        fun createMeny() {
+            mb.menus.clear()
+            for (i in 0 until myMenubar.size) {
+                var myItem = myMenubar[i] as List<Any>
+                var mm = mb.menu(myItem[0].toString())
+                addItemMenu(mm, myItem[2] as List<Any>)
+            }
         }
 
+        createMeny()
+
+        TopMenuModel.menubar.reCreateMenu.onChange {
+            createMeny()
+        }
     }
 }

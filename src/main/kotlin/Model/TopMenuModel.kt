@@ -5,6 +5,7 @@ import tornadofx.observable
 
 class TopMenuModel {
     object menubar{
+        var reCreateMenu = mutableListOf<Boolean>().observable()
         var all = mutableListOf<Any>(
             mutableListOf("Test", false, { TopMenuControl.static.close() })
         )
@@ -12,16 +13,16 @@ class TopMenuModel {
             mutableListOf("Open", false, { TopMenuControl.static.close() }),
             mutableListOf("Close", false, { TopMenuControl.static.close() }),
             mutableListOf("All", true, all)
-        ).observable()
+        )
 
         var about = mutableListOf<Any>(
             mutableListOf("About", false, { TopMenuControl.static.close() })
-        ).observable()
+        )
 
         var menu = mutableListOf<Any>(
             mutableListOf("File", true, file),
             mutableListOf("About", true, about)
-        ).observable()
+        )
 
     }
 }

@@ -1,9 +1,11 @@
 package View
 
+import Control.JobParserControl
+import Control.TopMenuControl
+import Model.JobParserModel
+import Model.TopMenuModel
 import javafx.scene.Parent
-import tornadofx.View
-import tornadofx.borderpane
-import tornadofx.top
+import tornadofx.*
 
 class ParserView : View(){
     init {
@@ -13,6 +15,16 @@ class ParserView : View(){
 
         top(){
             this += TopMenuView::class
+        }
+        center{
+            this += JobParserView::class
+        }
+        right{
+            button("t1"){
+                action {
+                    JobParserControl.st.openPage()
+                }
+            }
         }
 
     }
