@@ -1,6 +1,5 @@
 package View
 
-import Control.JobParserControl
 import Data.PageParser
 import Model.JobParserModel
 import javafx.scene.Parent
