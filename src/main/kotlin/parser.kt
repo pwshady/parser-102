@@ -1,4 +1,5 @@
 import View.ParserApp
+import View.WebTest
 import tornadofx.launch
 
 fun main() {

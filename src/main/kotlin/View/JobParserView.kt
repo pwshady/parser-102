@@ -19,7 +19,7 @@ class JobParserView() : View() {
 
         fun addTab(page : PageParser){
             tp.tab(page.name){
-
+                this += PageView(page)
             }
         }
 
