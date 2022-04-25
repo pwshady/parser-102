@@ -8,6 +8,8 @@ import tornadofx.*
 
 class JobParserView() : View() {
     override val root: Parent = vbox {
+        minWidth = 1600.0
+        minHeight = 1000.0
         var tp: TabPane by singleAssign()
         tp = tabpane() {}
 

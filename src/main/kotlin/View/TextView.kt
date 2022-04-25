@@ -2,16 +2,14 @@ package View
 
 import javafx.scene.Parent
 import tornadofx.Fragment
-import tornadofx.*
+import tornadofx.hbox
+import tornadofx.textarea
 
-
-class ViewView(html : String) : Fragment(){
-
-
+class TextView(html : String) : Fragment(){
 
     override val root: Parent = hbox {
         textarea {
-
+            text = html
         }
     }
 }

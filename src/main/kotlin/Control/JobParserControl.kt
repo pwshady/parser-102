@@ -33,7 +33,7 @@ class JobParserControl {
         {
             var tecRawJSONMask = RawJSONMask()
             if (html.children().size == 0){
-                return RawJSONMask(html.tagName(), html.toString(), mutableListOf(), "")
+                return RawJSONMask(html.tagName(), html.toString().replace("\n",""), mutableListOf(), "")
             }else{
                 tecRawJSONMask.tagName = html.tagName()
                 for (i in 0 until html.children().size){
